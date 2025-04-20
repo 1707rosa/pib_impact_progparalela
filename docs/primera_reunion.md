@@ -10,7 +10,7 @@
 - Omar Ovalles
 - Javier Aguero
 
----
+
 
 ## 🗓️ Acuerdos y Organización del Trabajo
 
@@ -32,7 +32,7 @@
 - Cada PR debe tener mínimo 1 aprobación antes de mergearse.
 - Las tareas deben actualizarse en Planner al finalizar.
 
----
+
 
 ## ✅ Objetivos definidos en la reunión
 
@@ -40,7 +40,7 @@
 - Implementar la proyección de impacto del PIB en 5 años esta semana.
 - Finalizar el esquema de métricas para medir eficiencia antes del domingo.
 
----
+
 
 ## 🧠 Siguientes pasos
 
@@ -48,4 +48,3 @@
 - Mantener contacto diario en Teams con actualizaciones rápidas.
 - Enviar PRs pequeñas para facilitar revisión y evitar conflictos grandes.
 
----
