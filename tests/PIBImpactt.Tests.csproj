@@ -11,6 +11,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\src\MyProject.csproj" />
+    <ProjectReference Include="..\src\PIBImpact.csproj" />
   </ItemGroup>
 </Project>
