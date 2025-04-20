@@ -11,6 +11,7 @@
 - Javier Aguero
 
 
+
 ## 🗓️ Acuerdos y Organización del Trabajo
 
 ### 🔧 Herramientas de trabajo
@@ -40,10 +41,10 @@
 - Finalizar el esquema de métricas para medir eficiencia antes del domingo.
 
 
+
 ## 🧠 Siguientes pasos
 
 - Crear documentación inicial del proyecto en `/docs`.
 - Mantener contacto diario en Teams con actualizaciones rápidas.
 - Enviar PRs pequeñas para facilitar revisión y evitar conflictos grandes.
-
 
