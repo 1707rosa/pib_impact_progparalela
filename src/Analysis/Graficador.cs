@@ -115,7 +115,10 @@ namespace PIBImpact.Analysis
             }
         }
 
-
+        internal static void GraficarTiempos(long tiempoSecuencial, long tiempoParalelo, ZedGraphControl zgc)
+    {
+        throw new NotImplementedException();
+    }
 
     }
 }
