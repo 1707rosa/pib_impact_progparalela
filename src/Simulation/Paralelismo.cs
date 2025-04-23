@@ -5,46 +5,97 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using PIBImpact.Analysis; // Para usar VisualizadorConsola
 
-class ResultadoSimulacion
+public class ResultadoSimulacion
 {
     public string Pais { get; set; }
     public double PIBOriginal { get; set; }
     public double TasaArancel { get; set; }
     public double PIBAjustado { get; set; }
+    public double CambioPib { get; set; } // en porcentaje
+    public string Sector { get; set; }
 }
 
 class Program
 {
     static void Main(string[] args)
     {
-
-        int[] hilos = [1, 2, 4, 8, 16];
-        string rutaArchivo = "C:\\Users\\souls\\Desktop\\ITLA C6\\Programacion paralela\\datos.csv";
+        string rutaArchivo = "C:\\Users\\souls\\Source\\Repos\\pib_impact_progparalela\\metrics\\datos_simulacion.csv";
         int cantidadEsperada = ContarLineasValidas(rutaArchivo);
 
-        Console.WriteLine("--------- COMPARANDO ESTADISTICAS -----------");
+        Console.WriteLine(">>> Método: Secuencial <<<\n");
+        long tiempoSecuencial = DatosSecuencial(rutaArchivo, cantidadEsperada);
+        Console.WriteLine("--------------------------------------------------\n");
 
-        // EJECUTANDO POR CADA NUMERO DE HILOS
-        foreach (int numHilos in hilos)
-        {
-            Console.WriteLine($"Ejecutando con {numHilos} hilos:");
-            DatosConParalellForeach(rutaArchivo, cantidadEsperada, numHilos);
-        }
-        DatosConWhenAll(rutaArchivo, cantidadEsperada);
+        Console.WriteLine(">>> Método: Parallel.ForEach <<<\n");
+        long tiempoParallel = DatosConParalellForeach(rutaArchivo, cantidadEsperada);
+        Console.WriteLine("--------------------------------------------------\n");
+
+        Console.WriteLine(">>> Método: Task.WhenAll <<<\n");
+        long tiempoWhenAll = DatosConWhenAll(rutaArchivo, cantidadEsperada);
+        Console.WriteLine("=============================        =====================\n");
+
+        Graficador.GraficarTiempos(tiempoSecuencial, tiempoParallel);
     }
 
-    static void DatosConParalellForeach(string ruta, int cantidadEsperada, int numHilos)
+    static long DatosSecuencial(string ruta, int cantidadEsperada)
+    {
+        var resultados = new List<ResultadoSimulacion>();
+        var reloj = Stopwatch.StartNew();
+
+        using (var lector = new StreamReader(ruta))
+        {
+            lector.ReadLine();
+            while (!lector.EndOfStream)
+            {
+                string? linea = lector.ReadLine();
+                if (!string.IsNullOrWhiteSpace(linea))
+                {
+                    var partes = linea.Split(',');
+                    if (partes.Length == 3)
+                    {
+                        try
+                        {
+                            string pais = partes[0];
+                            double pib = double.Parse(partes[1]);
+                            double tasa = double.Parse(partes[2]);
+
+                            double pibAjustado = pib * (1 - tasa);
+                            double cambioPib = (pibAjustado - pib) / pib * 100;
+
+                            resultados.Add(new ResultadoSimulacion
+                            {
+                                Pais = pais,
+                                PIBOriginal = pib,
+                                TasaArancel = tasa,
+                                PIBAjustado = pibAjustado,
+                                CambioPib = cambioPib,
+                                Sector = "General"
+                            });
+                        }
+                        catch { }
+                    }
+                }
+            }
+        }
+
+        reloj.Stop();
+        MostrarEstadisticas(resultados, cantidadEsperada, reloj.ElapsedMilliseconds);
+        VisualizadorConsola.MostrarTablaResultados(resultados);
+        return reloj.ElapsedMilliseconds;
+    }
+
+    static long DatosConParalellForeach(string ruta, int cantidadEsperada, int numHilos = -1)
     {
         var resultados = new ConcurrentBag<ResultadoSimulacion>();
         var reloj = Stopwatch.StartNew();
 
         using (var lector = new StreamReader(ruta))
         {
-            lector.ReadLine(); // Saltar encabezado
+            lector.ReadLine();
             var lineas = new List<string>();
 
-            // Leer todas las l�neas del archivo
             while (!lector.EndOfStream)
             {
                 string linea = lector.ReadLine();
@@ -52,10 +103,11 @@ class Program
                     lineas.Add(linea);
             }
 
-            Parallel.ForEach(lineas, new ParallelOptions { MaxDegreeOfParallelism = numHilos }, linea =>
-            {
+            var opciones = new ParallelOptions();
+            if (numHilos > 0) opciones.MaxDegreeOfParallelism = numHilos;
 
-                //Agregando el resultado a la lista
+            Parallel.ForEach(lineas, opciones, linea =>
+            {
                 var partes = linea.Split(',');
                 if (partes.Length == 3)
                 {
@@ -66,13 +118,16 @@ class Program
                         double tasa = double.Parse(partes[2]);
 
                         double pibAjustado = pib * (1 - tasa);
+                        double cambioPib = (pibAjustado - pib) / pib * 100;
 
                         resultados.Add(new ResultadoSimulacion
                         {
                             Pais = pais,
                             PIBOriginal = pib,
                             TasaArancel = tasa,
-                            PIBAjustado = pibAjustado
+                            PIBAjustado = pibAjustado,
+                            CambioPib = cambioPib,
+                            Sector = "General"
                         });
                     }
                     catch { }
@@ -81,12 +136,12 @@ class Program
         }
 
         reloj.Stop();
-
-        Console.WriteLine("Parallel.ForEach:");
         MostrarEstadisticas(resultados.ToList(), cantidadEsperada, reloj.ElapsedMilliseconds);
+        VisualizadorConsola.MostrarTablaResultados(resultados.ToList());
+        return reloj.ElapsedMilliseconds;
     }
 
-    static void DatosConWhenAll(string ruta, int cantidadEsperada)
+    static long DatosConWhenAll(string ruta, int cantidadEsperada)
     {
         var resultados = new ConcurrentBag<ResultadoSimulacion>();
         var reloj = Stopwatch.StartNew();
@@ -116,13 +171,16 @@ class Program
                     double tasa = double.Parse(partes[2]);
 
                     double pibAjustado = pib * (1 - tasa);
+                    double cambioPib = (pibAjustado - pib) / pib * 100;
 
                     resultados.Add(new ResultadoSimulacion
                     {
                         Pais = pais,
                         PIBOriginal = pib,
                         TasaArancel = tasa,
-                        PIBAjustado = pibAjustado
+                        PIBAjustado = pibAjustado,
+                        CambioPib = cambioPib,
+                        Sector = "General"
                     });
                 }
                 catch { }
@@ -132,9 +190,9 @@ class Program
         Task.WaitAll(tareas);
 
         reloj.Stop();
-
-        Console.WriteLine(">> Task.WhenAll:");
         MostrarEstadisticas(resultados.ToList(), cantidadEsperada, reloj.ElapsedMilliseconds);
+        VisualizadorConsola.MostrarTablaResultados(resultados.ToList());
+        return reloj.ElapsedMilliseconds;
     }
 
     static int ContarLineasValidas(string ruta)
@@ -155,11 +213,14 @@ class Program
 
     static void MostrarEstadisticas(List<ResultadoSimulacion> resultados, int esperados, long tiempo)
     {
-        Console.WriteLine($" Tiempo: {tiempo} ms");
-        Console.WriteLine($" Resultados: {resultados.Count} / Esperados: {esperados}");
+        Console.WriteLine($" Tiempo de ejecución: {tiempo} ms");
+        Console.WriteLine($" Resultados obtenidos: {resultados.Count} / Esperados: {esperados}");
 
         int errores = resultados.Count(r => r.Pais == null || r.PIBAjustado <= 0);
-        Console.WriteLine(errores == 0 ? " * Todos los resultados son v�lidos" : $" - Resultados inv�lidos: {errores}");
+        Console.WriteLine(errores == 0
+            ? "  Todos los resultados son válidos"
+            : $"   Resultados inválidos: {errores}");
+
         Console.WriteLine();
     }
 }
