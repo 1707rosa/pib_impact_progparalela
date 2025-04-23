@@ -1,0 +1,6 @@
+D:\Xamp\htdocs\pib_impact_progparalela\src\obj\Debug\net6.0\PIBImpact.csproj.AssemblyReference.cache
+D:\Xamp\htdocs\pib_impact_progparalela\src\obj\Debug\net6.0\PIBImpact.GeneratedMSBuildEditorConfig.editorconfig
+D:\Xamp\htdocs\pib_impact_progparalela\src\obj\Debug\net6.0\PIBImpact.AssemblyInfoInputs.cache
+D:\Xamp\htdocs\pib_impact_progparalela\src\obj\Debug\net6.0\PIBImpact.AssemblyInfo.cs
+D:\Xamp\htdocs\pib_impact_progparalela\src\obj\Debug\net6.0\PIBImpact.csproj.CoreCompileInputs.cache
+D:\Xamp\htdocs\pib_impact_progparalela\src\obj\Debug\net6.0\PIBImpact.sourcelink.json

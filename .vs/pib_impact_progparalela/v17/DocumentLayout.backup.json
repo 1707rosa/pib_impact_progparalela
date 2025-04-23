@@ -1,0 +1,335 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\ui\\frmprincipal.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\graficador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\graficador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\pibimpact.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\pibimpact.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\reportegenerador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\reportegenerador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\models\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\models\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\models\\arancel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\models\\arancel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\models\\sectoreconomico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\models\\sectoreconomico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\simulation\\paralelismo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\simulation\\paralelismo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\metricatiempo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\metricatiempo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\resultanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\resultanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\paralelismo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\services\\tariffimpactcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\services\\tariffimpactcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\services\\pibprojectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\services\\pibprojectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\visualizadorconsola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\visualizadorconsola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\C#\\IDE VISUAL\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\data\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\data\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
+              "RelativeToolTip": "src\\UI\\FrmPrincipal.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAiwCUAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:54:01.714Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmPrincipal.resx",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.resx",
+              "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.resx",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.resx*",
+              "RelativeToolTip": "src\\UI\\FrmPrincipal.resx*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-04-22T21:53:57.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmPrincipal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs [Design]",
+              "RelativeToolTip": "src\\UI\\FrmPrincipal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:51:38.139Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAE4HAAAAAAAAAAAnwGAHAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-04-22T20:30:52.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ResultAnalyzer.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ResultAnalyzer.cs",
+              "RelativeDocumentMoniker": "src\\Analysis\\ResultAnalyzer.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ResultAnalyzer.cs",
+              "RelativeToolTip": "src\\Analysis\\ResultAnalyzer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:51:34.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Graficador.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\Graficador.cs",
+              "RelativeDocumentMoniker": "src\\Analysis\\Graficador.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\Graficador.cs",
+              "RelativeToolTip": "src\\Analysis\\Graficador.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAEwI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:47:41.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PIBImpact.csproj",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\PIBImpact.csproj",
+              "RelativeDocumentMoniker": "src\\PIBImpact.csproj",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\PIBImpact.csproj",
+              "RelativeToolTip": "src\\PIBImpact.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-22T00:45:39.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReporteGenerador.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ReporteGenerador.cs",
+              "RelativeDocumentMoniker": "src\\Analysis\\ReporteGenerador.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ReporteGenerador.cs",
+              "RelativeToolTip": "src\\Analysis\\ReporteGenerador.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:50:56.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TariffImpactCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\TariffImpactCalculator.cs",
+              "RelativeDocumentMoniker": "src\\services\\TariffImpactCalculator.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\TariffImpactCalculator.cs",
+              "RelativeToolTip": "src\\services\\TariffImpactCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T01:19:53.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PibProjectionService.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\PibProjectionService.cs",
+              "RelativeDocumentMoniker": "src\\services\\PibProjectionService.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\PibProjectionService.cs",
+              "RelativeToolTip": "src\\services\\PibProjectionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T01:19:55.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Paralelismo.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Simulation\\Paralelismo.cs",
+              "RelativeDocumentMoniker": "src\\Simulation\\Paralelismo.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Simulation\\Paralelismo.cs",
+              "RelativeToolTip": "src\\Simulation\\Paralelismo.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAUwBYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:46:00.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Arancel.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Arancel.cs",
+              "RelativeDocumentMoniker": "src\\Models\\Arancel.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Arancel.cs",
+              "RelativeToolTip": "src\\Models\\Arancel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:59:30.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SectorEconomico.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\SectorEconomico.cs",
+              "RelativeDocumentMoniker": "src\\Models\\SectorEconomico.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\SectorEconomico.cs",
+              "RelativeToolTip": "src\\Models\\SectorEconomico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:59:38.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pais.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Pais.cs",
+              "RelativeDocumentMoniker": "src\\Models\\Pais.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Pais.cs",
+              "RelativeToolTip": "src\\Models\\Pais.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:59:35.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "paralelismo.cs",
+              "DocumentMoniker": "D:\\Descargas\\paralelismo.cs",
+              "ToolTip": "D:\\Descargas\\paralelismo.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T04:13:53.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VisualizadorConsola.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\VisualizadorConsola.cs",
+              "RelativeDocumentMoniker": "src\\Analysis\\VisualizadorConsola.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\VisualizadorConsola.cs",
+              "RelativeToolTip": "src\\Analysis\\VisualizadorConsola.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:50:48.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MetricaTiempo.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\MetricaTiempo.cs",
+              "RelativeDocumentMoniker": "src\\Analysis\\MetricaTiempo.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\MetricaTiempo.cs",
+              "RelativeToolTip": "src\\Analysis\\MetricaTiempo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T00:59:59.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "D:\\C#\\IDE VISUAL\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "D:\\C#\\IDE VISUAL\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAEsHAAAAAAAAAAAEwGAHAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-04-22T01:07:03.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DataLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Data\\DataLoader.cs",
+              "RelativeDocumentMoniker": "src\\Data\\DataLoader.cs",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Data\\DataLoader.cs",
+              "RelativeToolTip": "src\\Data\\DataLoader.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwEIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T01:12:32.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": ".gitkeep",
+              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\.gitkeep",
+              "RelativeDocumentMoniker": "src\\.gitkeep",
+              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\.gitkeep",
+              "RelativeToolTip": "src\\.gitkeep",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-22T00:48:59.899Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

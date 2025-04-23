@@ -1,0 +1,6 @@
+C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\obj\Debug\net7.0-windows\PIBImpact.csproj.AssemblyReference.cache
+C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\obj\Debug\net7.0-windows\PIBImpact.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\obj\Debug\net7.0-windows\PIBImpact.AssemblyInfoInputs.cache
+C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\obj\Debug\net7.0-windows\PIBImpact.AssemblyInfo.cs
+C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\obj\Debug\net7.0-windows\PIBImpact.csproj.CoreCompileInputs.cache
+C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\obj\Debug\net7.0-windows\PIBImpact.sourcelink.json

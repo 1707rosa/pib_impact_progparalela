@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\docs",
+    "\\metrics",
+    "\\src",
+    "\\src\\Analysis",
+    "\\src\\bin",
+    "\\src\\Data",
+    "\\src\\Models",
+    "\\src\\services",
+    "\\src\\Simulation"
+  ],
+  "SelectedNode": "\\src\\Simulation\\Paralelismo.cs",
+  "PreviewInSolutionExplorer": false
+}
