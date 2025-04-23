@@ -1,0 +1,10 @@
+/bin/
+/obj/
+/src/obj/
+/tests/obj/
+/*.pdb
+/*.dll
+/*.exe
+/*.json
+/src/bin/
+/tests/bin/

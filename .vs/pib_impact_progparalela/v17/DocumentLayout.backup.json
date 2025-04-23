@@ -1,83 +1,99 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\",
+  "WorkspaceRootPath": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\ui\\frmprincipal.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\graficador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\graficador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\pibimpact.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\pibimpact.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\pibimpact.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\reportegenerador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\tariffimpactcalculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\tests\\tariffimpactcalculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\paistests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\tests\\paistests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\pibprojectionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\tests\\pibprojectionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\graficartiempos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\tests\\graficartiempos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\graficadortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\tests\\graficadortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.100\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\ui\\frmprincipal.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\ui\\frmprincipal.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\analysis\\graficador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\graficador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\analysis\\reportegenerador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\reportegenerador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\models\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\models\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\models\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\models\\arancel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\models\\arancel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\models\\sectoreconomico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\models\\sectoreconomico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\simulation\\paralelismo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\simulation\\paralelismo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\simulation\\paralelismo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\metricatiempo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\metricatiempo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\resultanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\resultanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\paralelismo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\services\\tariffimpactcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\services\\tariffimpactcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\services\\tariffimpactcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\services\\pibprojectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\services\\pibprojectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\services\\pibprojectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\analysis\\visualizadorconsola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\analysis\\visualizadorconsola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\C#\\IDE VISUAL\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\data\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\data\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\data\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|c:\\users\\rangelica\\downloads\\pib_impact_progparalela\\src\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|a:\\curso c# b\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0814397D-F158-9D8A-6ABD-266B2365534E}|src\\PIBImpact.csproj|solutionrelative:src\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ResultAnalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\VisualizadorConsola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\MetricaTiempo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -87,113 +103,216 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "FrmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
               "RelativeToolTip": "src\\UI\\FrmPrincipal.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAiwCUAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAiwCQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T21:54:01.714Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmPrincipal.resx",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.resx",
-              "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.resx",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.resx*",
-              "RelativeToolTip": "src\\UI\\FrmPrincipal.resx*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-22T21:53:57.919Z",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Program.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Program.cs",
+              "RelativeToolTip": "src\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T14:29:12.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs [Design]",
-              "RelativeToolTip": "src\\UI\\FrmPrincipal.cs [Design]",
+              "Title": "PIBImpact.csproj",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\PIBImpact.csproj",
+              "RelativeDocumentMoniker": "src\\PIBImpact.csproj",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\PIBImpact.csproj",
+              "RelativeToolTip": "src\\PIBImpact.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-22T00:45:39.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TariffImpactCalculatorTests.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\TariffImpactCalculatorTests.cs",
+              "RelativeDocumentMoniker": "src\\tests\\TariffImpactCalculatorTests.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\TariffImpactCalculatorTests.cs",
+              "RelativeToolTip": "src\\tests\\TariffImpactCalculatorTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T21:51:38.139Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-23T13:53:44.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaisTests.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\PaisTests.cs",
+              "RelativeDocumentMoniker": "src\\tests\\PaisTests.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\PaisTests.cs",
+              "RelativeToolTip": "src\\tests\\PaisTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T14:34:26.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PibProjectionServiceTests.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\PibProjectionServiceTests.cs",
+              "RelativeDocumentMoniker": "src\\tests\\PibProjectionServiceTests.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\PibProjectionServiceTests.cs",
+              "RelativeToolTip": "src\\tests\\PibProjectionServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T14:34:30.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GraficarTiempos.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\GraficarTiempos.cs",
+              "RelativeDocumentMoniker": "src\\tests\\GraficarTiempos.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\GraficarTiempos.cs",
+              "RelativeToolTip": "src\\tests\\GraficarTiempos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:39:14.727Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "GraficadorTests.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\GraficadorTests.cs",
+              "RelativeDocumentMoniker": "src\\tests\\GraficadorTests.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\tests\\GraficadorTests.cs",
+              "RelativeToolTip": "src\\tests\\GraficadorTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:45:31.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAswAcBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-04-23T13:38:02.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmPrincipal.resx",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.resx",
+              "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.resx",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.resx",
+              "RelativeToolTip": "src\\UI\\FrmPrincipal.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-04-22T21:53:57.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "src\\UI\\FrmPrincipal.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\UI\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "src\\UI\\FrmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:51:38.139Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAE4HAAAAAAAAAAAnwGAHAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-04-22T20:30:52.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "ResultAnalyzer.cs",
               "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ResultAnalyzer.cs",
-              "RelativeDocumentMoniker": "src\\Analysis\\ResultAnalyzer.cs",
               "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ResultAnalyzer.cs",
-              "RelativeToolTip": "src\\Analysis\\ResultAnalyzer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T00:51:34.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Graficador.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\Graficador.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Analysis\\Graficador.cs",
               "RelativeDocumentMoniker": "src\\Analysis\\Graficador.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\Graficador.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Analysis\\Graficador.cs",
               "RelativeToolTip": "src\\Analysis\\Graficador.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAEwI8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAvwG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T00:47:41.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PIBImpact.csproj",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\PIBImpact.csproj",
-              "RelativeDocumentMoniker": "src\\PIBImpact.csproj",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\PIBImpact.csproj",
-              "RelativeToolTip": "src\\PIBImpact.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-22T00:45:39.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "ReporteGenerador.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ReporteGenerador.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Analysis\\ReporteGenerador.cs",
               "RelativeDocumentMoniker": "src\\Analysis\\ReporteGenerador.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\ReporteGenerador.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Analysis\\ReporteGenerador.cs",
               "RelativeToolTip": "src\\Analysis\\ReporteGenerador.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T00:50:56.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "TariffImpactCalculator.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\TariffImpactCalculator.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\services\\TariffImpactCalculator.cs",
               "RelativeDocumentMoniker": "src\\services\\TariffImpactCalculator.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\TariffImpactCalculator.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\services\\TariffImpactCalculator.cs",
               "RelativeToolTip": "src\\services\\TariffImpactCalculator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -201,11 +320,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "PibProjectionService.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\PibProjectionService.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\services\\PibProjectionService.cs",
               "RelativeDocumentMoniker": "src\\services\\PibProjectionService.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\services\\PibProjectionService.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\services\\PibProjectionService.cs",
               "RelativeToolTip": "src\\services\\PibProjectionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -213,11 +332,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Paralelismo.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Simulation\\Paralelismo.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Simulation\\Paralelismo.cs",
               "RelativeDocumentMoniker": "src\\Simulation\\Paralelismo.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Simulation\\Paralelismo.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Simulation\\Paralelismo.cs",
               "RelativeToolTip": "src\\Simulation\\Paralelismo.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAUwBYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -225,35 +344,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Arancel.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Arancel.cs",
-              "RelativeDocumentMoniker": "src\\Models\\Arancel.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Arancel.cs",
-              "RelativeToolTip": "src\\Models\\Arancel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T00:59:30.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SectorEconomico.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\SectorEconomico.cs",
-              "RelativeDocumentMoniker": "src\\Models\\SectorEconomico.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\SectorEconomico.cs",
-              "RelativeToolTip": "src\\Models\\SectorEconomico.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T00:59:38.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "Pais.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Pais.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Models\\Pais.cs",
               "RelativeDocumentMoniker": "src\\Models\\Pais.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Models\\Pais.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Models\\Pais.cs",
               "RelativeToolTip": "src\\Models\\Pais.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -261,55 +356,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "paralelismo.cs",
               "DocumentMoniker": "D:\\Descargas\\paralelismo.cs",
               "ToolTip": "D:\\Descargas\\paralelismo.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T04:13:53.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "VisualizadorConsola.cs",
               "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\VisualizadorConsola.cs",
-              "RelativeDocumentMoniker": "src\\Analysis\\VisualizadorConsola.cs",
               "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\VisualizadorConsola.cs",
-              "RelativeToolTip": "src\\Analysis\\VisualizadorConsola.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T00:50:48.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "MetricaTiempo.cs",
               "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\MetricaTiempo.cs",
-              "RelativeDocumentMoniker": "src\\Analysis\\MetricaTiempo.cs",
               "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Analysis\\MetricaTiempo.cs",
-              "RelativeToolTip": "src\\Analysis\\MetricaTiempo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T00:59:59.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "D:\\C#\\IDE VISUAL\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "D:\\C#\\IDE VISUAL\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAEsHAAAAAAAAAAAEwGAHAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-04-22T01:07:03.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "DataLoader.cs",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Data\\DataLoader.cs",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Data\\DataLoader.cs",
               "RelativeDocumentMoniker": "src\\Data\\DataLoader.cs",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\Data\\DataLoader.cs",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\Data\\DataLoader.cs",
               "RelativeToolTip": "src\\Data\\DataLoader.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -317,11 +404,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": ".gitkeep",
-              "DocumentMoniker": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\.gitkeep",
+              "DocumentMoniker": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\.gitkeep",
               "RelativeDocumentMoniker": "src\\.gitkeep",
-              "ToolTip": "C:\\Users\\Rangelica\\Downloads\\pib_impact_progparalela\\src\\.gitkeep",
+              "ToolTip": "A:\\Curso C# B\u00E1sico\\pib_impact_progparalela\\pib_impact_progparalela\\src\\.gitkeep",
               "RelativeToolTip": "src\\.gitkeep",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
