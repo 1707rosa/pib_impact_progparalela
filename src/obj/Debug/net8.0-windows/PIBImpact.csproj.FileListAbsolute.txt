@@ -10,10 +10,6 @@ C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-window
 C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\PIBImpact.dll
 C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\PIBImpact.pdb
 C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\CsvHelper.dll
-C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\OxyPlot.WindowsForms.dll
-C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\OxyPlot.Wpf.dll
-C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\OxyPlot.Xps.dll
-C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\OxyPlot.dll
 C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\ZedGraph.dll
 C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\de\ZedGraph.resources.dll
 C:\Users\Rangelica\Downloads\pib_impact_progparalela\src\bin\Debug\net8.0-windows\es\ZedGraph.resources.dll

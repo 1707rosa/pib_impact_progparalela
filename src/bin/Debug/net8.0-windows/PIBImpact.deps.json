@@ -9,9 +9,6 @@
       "PIBImpact/1.0.0": {
         "dependencies": {
           "CsvHelper": "27.2.1",
-          "OxyPlot": "2014.1.517",
-          "OxyPlot.Core": "2.2.0",
-          "OxyPlot.WindowsForms": "2.2.0",
           "ZedGraph": "5.1.7"
         },
         "runtime": {
@@ -24,35 +21,6 @@
             "assemblyVersion": "27.0.0.0",
             "fileVersion": "27.2.1.0"
           }
-        }
-      },
-      "OxyPlot/2014.1.517": {
-        "runtime": {
-          "lib/net45/OxyPlot.WindowsForms.dll": {
-            "assemblyVersion": "2014.1.517.0",
-            "fileVersion": "2014.1.517.0"
-          },
-          "lib/net45/OxyPlot.Wpf.dll": {
-            "assemblyVersion": "2014.1.517.0",
-            "fileVersion": "2014.1.517.0"
-          },
-          "lib/net45/OxyPlot.Xps.dll": {
-            "assemblyVersion": "2014.1.517.0",
-            "fileVersion": "2014.1.517.0"
-          }
-        }
-      },
-      "OxyPlot.Core/2.2.0": {
-        "runtime": {
-          "lib/net8.0/OxyPlot.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.0"
-          }
-        }
-      },
-      "OxyPlot.WindowsForms/2.2.0": {
-        "dependencies": {
-          "OxyPlot.Core": "2.2.0"
         }
       },
       "ZedGraph/5.1.7": {
@@ -118,27 +86,6 @@
       "sha512": "sha512-uS5ix5hL9gL5taiAG//CScyJa8Fn1ZOh3FDhDvf4laboESFs84mCNropfp7PIt8xCkyQofljFpqu1B5UnSXjyA==",
       "path": "csvhelper/27.2.1",
       "hashPath": "csvhelper.27.2.1.nupkg.sha512"
-    },
-    "OxyPlot/2014.1.517": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-x2kI4JyC5diUSD8xSo8TiE4Ab+BrqLD8DusI5+4w6kMTtcKgx5kcH+SlgRGeSMFtZb3X7ABFHKrGpqbWB6ILZw==",
-      "path": "oxyplot/2014.1.517",
-      "hashPath": "oxyplot.2014.1.517.nupkg.sha512"
-    },
-    "OxyPlot.Core/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QhXNdXR5FPpro/VoLx3BOp6AhQo7YrbfmWEZ9cgY+pnYM7RYORZjnu+aDMA8ka9A1r8hLkX//NbCPZNUv+l8qA==",
-      "path": "oxyplot.core/2.2.0",
-      "hashPath": "oxyplot.core.2.2.0.nupkg.sha512"
-    },
-    "OxyPlot.WindowsForms/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jkveaQ7d3PanUP6OKaZ+IXFPuwpyabifPQiQZ40pQls8Tuedf0mUZ8JcLkMltK5Jkj/JRwGP2cNn1oJ8NwaV3A==",
-      "path": "oxyplot.windowsforms/2.2.0",
-      "hashPath": "oxyplot.windowsforms.2.2.0.nupkg.sha512"
     },
     "ZedGraph/5.1.7": {
       "type": "package",
