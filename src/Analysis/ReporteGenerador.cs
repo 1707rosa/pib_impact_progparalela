@@ -7,30 +7,24 @@ using CsvHelper;
 using CsvHelper.Configuration;
 using PIBImpact.Models;
 
-namespace PIBImpact.analysis
+namespace PIBImpact.Analysis
 {
     public static class ReporteGenerador
     {
-        public static void GenerarReporteCsv(List<ResultadoSimulacion> resultados, string? rutaArchivo = null, int topSectores = 5)
+        public static void GenerarReportePibAfectado(List<ResultadoSimulacion> resultados, string rutaArchivo = null)
         {
-            // Definir ruta segura relativa a la raíz del proyecto
+            // Ruta por defecto si no se especifica
             if (string.IsNullOrEmpty(rutaArchivo))
             {
-                rutaArchivo = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "metrics", "reporte_global.csv");
+                rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reportes", "pib_afectado.csv");
             }
 
             // Asegurar que el directorio exista
-            string? directorio = Path.GetDirectoryName(rutaArchivo);
-            if (!string.IsNullOrEmpty(directorio) && !Directory.Exists(directorio))
+            var directorio = Path.GetDirectoryName(rutaArchivo);
+            if (!Directory.Exists(directorio))
+            {
                 Directory.CreateDirectory(directorio);
-
-            // Eliminar archivo si ya existe
-            if (File.Exists(rutaArchivo))
-                File.Delete(rutaArchivo);
-
-            // Calcular metricas globales
-            double pibTotal = ResultAnalyzer.CalcularPibTotalAfectado(resultados);
-            var sectoresImpactados = ResultAnalyzer.ObtenerSectoresMasImpactados(resultados, topSectores);
+            }
 
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -38,74 +32,46 @@ namespace PIBImpact.analysis
                 Delimiter = ","
             };
 
-            using (var writer = new StreamWriter(rutaArchivo, false))
+            using (var writer = new StreamWriter(rutaArchivo))
             using (var csv = new CsvWriter(writer, config))
             {
-                // Sección global
-                csv.WriteField("=====");
-                csv.WriteField("Resultado Global");
+                // Encabezados
+                csv.WriteField("País");
+                csv.WriteField("PIB Original");
+                csv.WriteField("PIB Ajustado");
+                csv.WriteField("PIB Afectado");
+                csv.WriteField("Cambio (%)");
                 csv.NextRecord();
 
-                csv.WriteField("PIB Total Afectado");
-                csv.WriteField(pibTotal);
-                csv.NextRecord();
-
-                csv.WriteField("Top Sectores Mas Impactados (Global)");
-                csv.NextRecord();
-
-                foreach (var sector in sectoresImpactados)
+                // Datos por país
+                foreach (var grupo in resultados.GroupBy(r => r.Pais))
                 {
-                    csv.WriteField(sector.Sector);
-                    csv.WriteField(sector.ImpactoTotal);
+                    var primerResultado = grupo.First();
+                    double pibAfectado = primerResultado.PIBOriginal - primerResultado.PIBAjustado;
+
+                    csv.WriteField(grupo.Key); // País
+                    csv.WriteField(primerResultado.PIBOriginal.ToString("N2"));
+                    csv.WriteField(primerResultado.PIBAjustado.ToString("N2"));
+                    csv.WriteField(pibAfectado.ToString("N2"));
+                    csv.WriteField(primerResultado.CambioPib.ToString("N2") + "%");
                     csv.NextRecord();
                 }
 
+                // Total global
+                double totalOriginal = resultados.Sum(r => r.PIBOriginal);
+                double totalAjustado = resultados.Sum(r => r.PIBAjustado);
+                double totalAfectado = totalOriginal - totalAjustado;
+                double cambioTotal = ((totalAjustado - totalOriginal) / totalOriginal) * 100;
+
+                csv.WriteField("TOTAL GLOBAL");
+                csv.WriteField(totalOriginal.ToString("N2"));
+                csv.WriteField(totalAjustado.ToString("N2"));
+                csv.WriteField(totalAfectado.ToString("N2"));
+                csv.WriteField(cambioTotal.ToString("N2") + "%");
                 csv.NextRecord();
-                csv.WriteField("=====");
-                csv.WriteField("Resultados por Pais");
-                csv.NextRecord();
-
-                // Agrupar por pais
-                var resultadosPorPais = resultados
-                    .GroupBy(r => r.Pais)
-                    .OrderBy(g => g.Key);
-
-                foreach (var grupoPais in resultadosPorPais)
-                {
-                    string pais = grupoPais.Key;
-                    double pibPais = grupoPais.Sum(x => x.CambioPib);
-                    var sectoresPais = grupoPais
-                        .GroupBy(r => r.Sector)
-                        .Select(g => new
-                        {
-                            Sector = g.Key,
-                            ImpactoTotal = g.Sum(x => x.CambioPib)
-                        })
-                        .OrderByDescending(s => Math.Abs(s.ImpactoTotal))
-                        .Take(topSectores);
-
-                    csv.WriteField($"Pais: {pais}");
-                    csv.NextRecord();
-
-                    csv.WriteField("PIB Total Afectado");
-                    csv.WriteField(pibPais);
-                    csv.NextRecord();
-
-                    csv.WriteField("Top Sectores Mas Impactados");
-                    csv.NextRecord();
-
-                    foreach (var s in sectoresPais)
-                    {
-                        csv.WriteField(s.Sector);
-                        csv.WriteField(s.ImpactoTotal);
-                        csv.NextRecord();
-                    }
-
-                    csv.NextRecord();
-                }
             }
 
-            Console.WriteLine($" Reporte generado en: {rutaArchivo}");
+            Console.WriteLine($"Reporte de PIB afectado generado en: {rutaArchivo}");
         }
     }
 }
