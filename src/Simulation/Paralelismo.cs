@@ -5,105 +5,138 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-
-class ResultadoSimulacion
+using PIBImpact.Services;
+ 
+public class ResultadoSimulacion
 {
     public string Pais { get; set; }
     public double PIBOriginal { get; set; }
     public double TasaArancel { get; set; }
     public double PIBAjustado { get; set; }
+    public double CambioPib { get; set; }
+    public string Sector { get; set; }
+    public List<double> Proyeccion5Annos { get; set; } = new();
 }
-
-class Program
+ 
+public static class SimulacionProcessor
 {
-    static void Main(string[] args)
+    private const double TasaCrecimiento = 0.02;
+ 
+    public static List<ResultadoSimulacion> EjecutarSecuencial(string ruta, out long tiempoMs)
     {
-
-        int[] hilos = [1, 2, 4, 8, 16];
-        string rutaArchivo = "C:\\Users\\souls\\Desktop\\ITLA C6\\Programacion paralela\\datos.csv";
-        int cantidadEsperada = ContarLineasValidas(rutaArchivo);
-
-        Console.WriteLine("--------- COMPARANDO ESTADISTICAS -----------");
-
-        // EJECUTANDO POR CADA NUMERO DE HILOS
-        foreach (int numHilos in hilos)
-        {
-            Console.WriteLine($"Ejecutando con {numHilos} hilos:");
-            DatosConParalellForeach(rutaArchivo, cantidadEsperada, numHilos);
-        }
-        DatosConWhenAll(rutaArchivo, cantidadEsperada);
-    }
-
-    static void DatosConParalellForeach(string ruta, int cantidadEsperada, int numHilos)
-    {
-        var resultados = new ConcurrentBag<ResultadoSimulacion>();
+        var resultados = new List<ResultadoSimulacion>();
         var reloj = Stopwatch.StartNew();
-
+ 
         using (var lector = new StreamReader(ruta))
         {
-            lector.ReadLine(); // Saltar encabezado
-            var lineas = new List<string>();
-
-            // Leer todas las líneas del archivo
+            lector.ReadLine();
             while (!lector.EndOfStream)
             {
-                string linea = lector.ReadLine();
+                string? linea = lector.ReadLine();
                 if (!string.IsNullOrWhiteSpace(linea))
-                    lineas.Add(linea);
-            }
-
-            Parallel.ForEach(lineas, new ParallelOptions { MaxDegreeOfParallelism = numHilos }, linea =>
-            {
-
-                //Agregando el resultado a la lista
-                var partes = linea.Split(',');
-                if (partes.Length == 3)
                 {
-                    try
+                    var partes = linea.Split(',');
+                    if (partes.Length == 3)
                     {
-                        string pais = partes[0];
-                        double pib = double.Parse(partes[1]);
-                        double tasa = double.Parse(partes[2]);
-
-                        double pibAjustado = pib * (1 - tasa);
-
-                        resultados.Add(new ResultadoSimulacion
+                        try
                         {
-                            Pais = pais,
-                            PIBOriginal = pib,
-                            TasaArancel = tasa,
-                            PIBAjustado = pibAjustado
-                        });
+                            string pais = partes[0];
+                            double pib = double.Parse(partes[1]);
+                            double tasa = double.Parse(partes[2]);
+ 
+                            double pibAjustado = TariffImpactCalculator.CalcularPibAjustado(pib, tasa);
+                            double cambioPib = (pibAjustado - pib) / pib * 100;
+ 
+                            var resultado = new ResultadoSimulacion
+                            {
+                                Pais = pais,
+                                PIBOriginal = pib,
+                                TasaArancel = tasa,
+                                PIBAjustado = pibAjustado,
+                                CambioPib = cambioPib,
+                                Sector = "General",
+                                Proyeccion5Annos = PibProjectionService.ProyectarPibAjustado5Years(pib, tasa, TasaCrecimiento)
+                            };
+ 
+                            resultados.Add(resultado);
+                        }
+                        catch { }
                     }
-                    catch { }
                 }
-            });
+            }
         }
-
+ 
         reloj.Stop();
-
-        Console.WriteLine("Parallel.ForEach:");
-        MostrarEstadisticas(resultados.ToList(), cantidadEsperada, reloj.ElapsedMilliseconds);
+        tiempoMs = reloj.ElapsedMilliseconds;
+        return resultados;
     }
-
-    static void DatosConWhenAll(string ruta, int cantidadEsperada)
+ 
+    public static List<ResultadoSimulacion> EjecutarParallel(string ruta, out long tiempoMs)
     {
         var resultados = new ConcurrentBag<ResultadoSimulacion>();
         var reloj = Stopwatch.StartNew();
-
+ 
+        List<string> lineas;
+        using (var lector = new StreamReader(ruta))
+        {
+            lector.ReadLine(); // encabezado
+            lineas = lector.ReadToEnd()
+                           .Split('\n')
+                           .Where(l => !string.IsNullOrWhiteSpace(l))
+                           .ToList();
+        }
+ 
+        Parallel.ForEach(lineas, linea =>
+        {
+            var partes = linea.Split(',');
+            if (partes.Length == 3)
+            {
+                try
+                {
+                    string pais = partes[0];
+                    double pib = double.Parse(partes[1]);
+                    double tasa = double.Parse(partes[2]);
+ 
+                    double pibAjustado = TariffImpactCalculator.CalcularPibAjustado(pib, tasa);
+                    double cambioPib = (pibAjustado - pib) / pib * 100;
+ 
+                    var resultado = new ResultadoSimulacion
+                    {
+                        Pais = pais,
+                        PIBOriginal = pib,
+                        TasaArancel = tasa,
+                        PIBAjustado = pibAjustado,
+                        CambioPib = cambioPib,
+                        Sector = "General",
+                        Proyeccion5Annos = PibProjectionService.ProyectarPibAjustado5Years(pib, tasa, TasaCrecimiento)
+                    };
+ 
+                    resultados.Add(resultado);
+                }
+                catch { }
+            }
+        });
+ 
+        reloj.Stop();
+        tiempoMs = reloj.ElapsedMilliseconds;
+        return resultados.ToList();
+    }
+ 
+    public static List<ResultadoSimulacion> EjecutarWhenAll(string ruta, out long tiempoMs)
+    {
+        var resultados = new ConcurrentBag<ResultadoSimulacion>();
+        var reloj = Stopwatch.StartNew();
+ 
         List<string> lineas;
         using (var lector = new StreamReader(ruta))
         {
             lector.ReadLine();
-            lineas = new List<string>();
-            while (!lector.EndOfStream)
-            {
-                string linea = lector.ReadLine();
-                if (!string.IsNullOrWhiteSpace(linea))
-                    lineas.Add(linea);
-            }
+            lineas = lector.ReadToEnd()
+                           .Split('\n')
+                           .Where(l => !string.IsNullOrWhiteSpace(l))
+                           .ToList();
         }
-
+ 
         var tareas = lineas.Select(linea => Task.Run(() =>
         {
             var partes = linea.Split(',');
@@ -114,52 +147,39 @@ class Program
                     string pais = partes[0];
                     double pib = double.Parse(partes[1]);
                     double tasa = double.Parse(partes[2]);
-
-                    double pibAjustado = pib * (1 - tasa);
-
-                    resultados.Add(new ResultadoSimulacion
+ 
+                    double pibAjustado = TariffImpactCalculator.CalcularPibAjustado(pib, tasa);
+                    double cambioPib = (pibAjustado - pib) / pib * 100;
+ 
+                    var resultado = new ResultadoSimulacion
                     {
                         Pais = pais,
                         PIBOriginal = pib,
                         TasaArancel = tasa,
-                        PIBAjustado = pibAjustado
-                    });
+                        PIBAjustado = pibAjustado,
+                        CambioPib = cambioPib,
+                        Sector = "General",
+                        Proyeccion5Annos = PibProjectionService.ProyectarPibAjustado5Years(pib, tasa, TasaCrecimiento)
+                    };
+ 
+                    resultados.Add(resultado);
                 }
                 catch { }
             }
         })).ToArray();
-
+ 
         Task.WaitAll(tareas);
-
+ 
         reloj.Stop();
-
-        Console.WriteLine(">> Task.WhenAll:");
-        MostrarEstadisticas(resultados.ToList(), cantidadEsperada, reloj.ElapsedMilliseconds);
+        tiempoMs = reloj.ElapsedMilliseconds;
+        return resultados.ToList();
     }
-
-    static int ContarLineasValidas(string ruta)
+ 
+    public static double CalcularPibMundialAjustado(List<ResultadoSimulacion> resultados)
     {
-        int contador = 0;
-        using (var lector = new StreamReader(ruta))
-        {
-            lector.ReadLine();
-            while (!lector.EndOfStream)
-            {
-                var linea = lector.ReadLine();
-                if (!string.IsNullOrWhiteSpace(linea))
-                    contador++;
-            }
-        }
-        return contador;
-    }
-
-    static void MostrarEstadisticas(List<ResultadoSimulacion> resultados, int esperados, long tiempo)
-    {
-        Console.WriteLine($" Tiempo: {tiempo} ms");
-        Console.WriteLine($" Resultados: {resultados.Count} / Esperados: {esperados}");
-
-        int errores = resultados.Count(r => r.Pais == null || r.PIBAjustado <= 0);
-        Console.WriteLine(errores == 0 ? " * Todos los resultados son válidos" : $" - Resultados inválidos: {errores}");
-        Console.WriteLine();
+       
+        double pibMundialAjustado = resultados.Sum(r => r.PIBAjustado);
+       
+        return pibMundialAjustado;
     }
 }
