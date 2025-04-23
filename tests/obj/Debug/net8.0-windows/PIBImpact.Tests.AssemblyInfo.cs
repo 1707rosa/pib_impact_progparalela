@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PIBImpact.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02d1677e869d8c2d8e172dd46d66a4696ca7c9b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af8d854a0ea0b43d81ab87ceacbadd63e98b07e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("PIBImpact.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PIBImpact.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
