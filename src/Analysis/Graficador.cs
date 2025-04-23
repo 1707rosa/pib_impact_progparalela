@@ -10,31 +10,37 @@ namespace PIBImpact.Analysis
 {
     public static class Graficador
     {
-        public static void GraficarTiempos(long tiempoSecuencial, long tiempoParalelo, ZedGraphControl zgc)
+        public static void GraficarTiempos(List<int> hilos, List<long> tiemposParalelos, long tiempoSecuencial, ZedGraphControl zgc)
         {
-            GraphPane myPane = zgc.GraphPane;
-            myPane.Title.Text = "Comparación de Tiempos de Ejecución";
-            myPane.XAxis.Title.Text = "Tipo de Ejecución";
-            myPane.YAxis.Title.Text = "Tiempo (ms)";
+            GraphPane pane = zgc.GraphPane;
+            pane.CurveList.Clear();
 
-            myPane.CurveList.Clear();
+            pane.Title.Text = "Comparación de Tiempos de Ejecución";
+            pane.XAxis.Title.Text = "Cantidad de Hilos";
+            pane.YAxis.Title.Text = "Tiempo (ms)";
 
-            string[] labels = { "Secuencial", "Paralelo" };
-            double[] values = { tiempoSecuencial, tiempoParalelo };
+            PointPairList puntos = new PointPairList();
+            for (int i = 0; i < hilos.Count; i++)
+            {
+                puntos.Add(hilos[i], tiemposParalelos[i]);
+            }
 
-            BarItem bar = myPane.AddBar("Tiempos", null, values, Color.Blue);
+            LineItem curva = pane.AddCurve("Paralelo", puntos, Color.Blue, SymbolType.Circle);
 
-            myPane.XAxis.Scale.TextLabels = labels;
-            myPane.XAxis.Type = AxisType.Text;
+            // Línea horizontal para la ejecución secuencial
+            LineItem lineaSecuencial = pane.AddCurve("Secuencial", new PointPairList
+    {
+        new PointPair(hilos.Min(), tiempoSecuencial),
+        new PointPair(hilos.Max(), tiempoSecuencial)
+    }, Color.Red, SymbolType.None);
 
-
-            myPane.YAxis.Scale.Min = 0;
+            curva.Line.Width = 2.0F;
+            lineaSecuencial.Line.Style = System.Drawing.Drawing2D.DashStyle.Dash;
+            lineaSecuencial.Line.Width = 2.0F;
 
             zgc.AxisChange();
             zgc.Invalidate();
         }
-
-
         public static void GraficarProyeccionPIB(List<ResultadoSimulacion> resultados, ZedGraphControl zedGraphControl, string? rutaGuardar = null)
         {
             GraphPane myPane = zedGraphControl.GraphPane;
@@ -108,5 +114,8 @@ namespace PIBImpact.Analysis
                 }
             }
         }
+
+
+
     }
 }
