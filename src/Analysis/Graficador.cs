@@ -1,128 +1,112 @@
-using ScottPlot;
+using ZedGraph;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
-namespace PIBImpact.analysis
+namespace PIBImpact.Analysis
 {
     public static class Graficador
     {
-        public static void GraficarTiempos(long tiempoSecuencial, long tiempoParalelo)
+        public static void GraficarTiempos(long tiempoSecuencial, long tiempoParalelo, ZedGraphControl zgc)
         {
-            double[] valores = { tiempoSecuencial, tiempoParalelo };
-            string[] etiquetas = { "Secuencial", "Paralela" };
+            GraphPane myPane = zgc.GraphPane;
+            myPane.Title.Text = "Comparación de Tiempos de Ejecución";
+            myPane.XAxis.Title.Text = "Tipo de Ejecución";
+            myPane.YAxis.Title.Text = "Tiempo (ms)";
 
-            var plt = new ScottPlot.Plot(600, 400);
-            var barras = plt.AddBar(valores);
+            myPane.CurveList.Clear();
 
-            plt.XTicks(etiquetas);
-            plt.Title("Comparacion de Tiempos de Ejecución");
-            plt.YLabel("Tiempo (ms)");
-            plt.SetAxisLimits(yMin: 0);
+            string[] labels = { "Secuencial", "Paralelo" };
+            double[] values = { tiempoSecuencial, tiempoParalelo };
 
-            // Ruta relativa a la raíz del proyecto
-            string rutaArchivo = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "metrics", "grafica_tiempos.png");
+            BarItem bar = myPane.AddBar("Tiempos", null, values, Color.Blue);
 
-            // Crear directorio si no existe
-            string? directorio = Path.GetDirectoryName(rutaArchivo);
+            myPane.XAxis.Scale.TextLabels = labels;
+            myPane.XAxis.Type = AxisType.Text;
+
+
+            myPane.YAxis.Scale.Min = 0;
+
+            zgc.AxisChange();
+            zgc.Invalidate();
+        }
+
+
+        public static void GraficarProyeccionPIB(List<ResultadoSimulacion> resultados, ZedGraphControl zedGraphControl, string? rutaGuardar = null)
+        {
+            GraphPane myPane = zedGraphControl.GraphPane;
+            myPane.CurveList.Clear();
+            myPane.GraphObjList.Clear();
+
+            myPane.Title.Text = "Proyección del PIB Mundial - Próximos 5 años";
+            myPane.XAxis.Title.Text = "Año";
+            myPane.YAxis.Title.Text = "PIB Mundial Ajustado (USD)";
+
+
+            double[] pibMundialPorAnno = new double[5];
+            foreach (var resultado in resultados)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    pibMundialPorAnno[i] += resultado.Proyeccion5Annos[i];
+                }
+            }
+
+            PointPairList puntos = new PointPairList();
+            for (int i = 0; i < 5; i++)
+            {
+                puntos.Add(i + 1, pibMundialPorAnno[i]);
+            }
+
+            LineItem curva = myPane.AddCurve("PIB Mundial Ajustado", puntos, Color.DarkCyan, SymbolType.Circle);
+            curva.Line.Width = 2.5F;
+            curva.Symbol.Fill = new Fill(Color.White);
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                string texto = pibMundialPorAnno[i].ToString("F2");
+                TextObj etiqueta = new TextObj(texto, i + 1, pibMundialPorAnno[i], CoordType.AxisXYScale, AlignH.Left, AlignV.Bottom);
+                etiqueta.FontSpec.Size = 10;
+                myPane.GraphObjList.Add(etiqueta);
+            }
+
+
+            myPane.XAxis.Scale.Min = 0.5;
+            myPane.XAxis.Scale.Max = 5.5;
+            myPane.XAxis.Scale.MajorStep = 1;
+            myPane.XAxis.Scale.TextLabels = new[] { "1", "2", "3", "4", "5" };
+            myPane.XAxis.Type = AxisType.Text;
+
+            zedGraphControl.AxisChange();
+            zedGraphControl.Invalidate();
+
+            if (!string.IsNullOrEmpty(rutaGuardar))
+            {
+                AsegurarDirectorio(rutaGuardar);
+                myPane.GetImage().Save(rutaGuardar, System.Drawing.Imaging.ImageFormat.Png);
+            }
+        }
+
+        private static void AsegurarDirectorio(string ruta)
+        {
+            string directorio = Path.GetDirectoryName(ruta);
+
+
             if (!string.IsNullOrEmpty(directorio) && !Directory.Exists(directorio))
-                Directory.CreateDirectory(directorio);
-
-            plt.SaveFig(rutaArchivo);
-            Console.WriteLine($" Grafica de tiempos guardada en: {Path.GetFullPath(rutaArchivo)}");
-        }
-         public static void GraficarImpactoPIBGlobal(Dictionary<string, double> impactoPorSector)
- {
-     string[] sectores = new string[impactoPorSector.Count];
-     double[] valores = new double[impactoPorSector.Count];
-     int i = 0;
-
-     foreach (var kvp in impactoPorSector)
-     {
-         sectores[i] = kvp.Key;
-         valores[i] = kvp.Value;
-         i++;
-     }
-
-     var plt = new ScottPlot.Plot(1000, 800); // más alto por ser barras horizontales
-
-     var barras = plt.AddBar(valores);
-     barras.Orientation = ScottPlot.Orientation.Horizontal;
-     barras.BarWidth = 0.6;
-
-     // Etiquetas del eje Y (porque es horizontal)
-     plt.YTicks(Enumerable.Range(0, sectores.Length).Select(x => (double)x).ToArray(), sectores);
-     plt.YAxis.TickLabelStyle(fontSize: 10); // Ajusta tamaño si son muchos
-
-     plt.Title("Impacto del PIB por Sector");
-     plt.XLabel("PIB Afectado");
-     plt.SetAxisLimits(xMin: 0); // ahora el eje X es el de valores
-
-     // Ruta de guardado
-     string rutaArchivo = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "metrics", "grafica_pib_global.png");
-
-     string? directorio = Path.GetDirectoryName(rutaArchivo);
-     if (!string.IsNullOrEmpty(directorio) && !Directory.Exists(directorio))
-         Directory.CreateDirectory(directorio);
-
-     plt.SaveFig(rutaArchivo);
-     Console.WriteLine($" Grafica de impacto global por sector guardada en: {Path.GetFullPath(rutaArchivo)}");
- }
-        public static void GraficarImpactoPIBPorPais(Dictionary<string, Dictionary<string, double>> impactoPorPais)
-{
-    // Ruta base de la carpeta "por_pais"
-    string rutaBase = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "metrics", "por_pais");
-
-    // Asegurarse de que la carpeta exista
-    if (!Directory.Exists(rutaBase))
-        Directory.CreateDirectory(rutaBase);
-
-    foreach (var paisKvp in impactoPorPais)
-    {
-        string pais = paisKvp.Key.Trim();
-        Dictionary<string, double> impactoPorSector = paisKvp.Value;
-
-        // Validar datos
-        if (impactoPorSector.Count == 0)
-            continue;
-
-        string[] sectores = new string[impactoPorSector.Count];
-        double[] valores = new double[impactoPorSector.Count];
-        int i = 0;
-
-        foreach (var kvp in impactoPorSector)
-        {
-            sectores[i] = kvp.Key;
-            valores[i] = kvp.Value;
-            i++;
-        }
-
-        var plt = new ScottPlot.Plot(800, 500);
-        plt.AddBar(valores);
-        plt.XTicks(sectores);
-        plt.Title($"Impacto del PIB por Sector - {pais}");
-        plt.YLabel("PIB Afectado");
-        plt.SetAxisLimits(yMin: 0);
-
-        // Limpiar nombre del archivo
-        string nombreLimpio = string.Concat(pais.Where(c => !Path.GetInvalidFileNameChars().Contains(c))).Replace(" ", "_");
-
-        string rutaArchivo = Path.Combine(rutaBase, $"grafica_pib_{nombreLimpio}.png");
-
-        try
-        {
-            plt.SaveFig(rutaArchivo);
-            Console.WriteLine($"Grafica guardada para {pais} en: {Path.GetFullPath(rutaArchivo)}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($" Error al guardar la grafica para {pais}: {ex.Message}");
-        }
-
-        
-            
-        }
-
+            {
+                try
+                {
+                    Directory.CreateDirectory(directorio);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al crear el directorio: {ex.Message}");
+                }
+            }
         }
     }
 }
