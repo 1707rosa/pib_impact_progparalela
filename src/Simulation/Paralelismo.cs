@@ -5,45 +5,28 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using PIBImpact.Analysis; // Para usar VisualizadorConsola
-
+using PIBImpact.Services;
+ 
 public class ResultadoSimulacion
 {
     public string Pais { get; set; }
     public double PIBOriginal { get; set; }
     public double TasaArancel { get; set; }
     public double PIBAjustado { get; set; }
-    public double CambioPib { get; set; } // en porcentaje
+    public double CambioPib { get; set; }
     public string Sector { get; set; }
+    public List<double> Proyeccion5Annos { get; set; } = new();
 }
-
-class Program
+ 
+public static class SimulacionProcessor
 {
-    static void Main(string[] args)
-    {
-        string rutaArchivo = "C:\\Users\\souls\\Source\\Repos\\pib_impact_progparalela\\metrics\\datos_simulacion.csv";
-        int cantidadEsperada = ContarLineasValidas(rutaArchivo);
-
-        Console.WriteLine(">>> Método: Secuencial <<<\n");
-        long tiempoSecuencial = DatosSecuencial(rutaArchivo, cantidadEsperada);
-        Console.WriteLine("--------------------------------------------------\n");
-
-        Console.WriteLine(">>> Método: Parallel.ForEach <<<\n");
-        long tiempoParallel = DatosConParalellForeach(rutaArchivo, cantidadEsperada);
-        Console.WriteLine("--------------------------------------------------\n");
-
-        Console.WriteLine(">>> Método: Task.WhenAll <<<\n");
-        long tiempoWhenAll = DatosConWhenAll(rutaArchivo, cantidadEsperada);
-        Console.WriteLine("=============================        =====================\n");
-
-        Graficador.GraficarTiempos(tiempoSecuencial, tiempoParallel);
-    }
-
-    static long DatosSecuencial(string ruta, int cantidadEsperada)
+    private const double TasaCrecimiento = 0.02;
+ 
+    public static List<ResultadoSimulacion> EjecutarSecuencial(string ruta, out long tiempoMs)
     {
         var resultados = new List<ResultadoSimulacion>();
         var reloj = Stopwatch.StartNew();
-
+ 
         using (var lector = new StreamReader(ruta))
         {
             lector.ReadLine();
@@ -60,105 +43,100 @@ class Program
                             string pais = partes[0];
                             double pib = double.Parse(partes[1]);
                             double tasa = double.Parse(partes[2]);
-
-                            double pibAjustado = pib * (1 - tasa);
+ 
+                            double pibAjustado = TariffImpactCalculator.CalcularPibAjustado(pib, tasa);
                             double cambioPib = (pibAjustado - pib) / pib * 100;
-
-                            resultados.Add(new ResultadoSimulacion
+ 
+                            var resultado = new ResultadoSimulacion
                             {
                                 Pais = pais,
                                 PIBOriginal = pib,
                                 TasaArancel = tasa,
                                 PIBAjustado = pibAjustado,
                                 CambioPib = cambioPib,
-                                Sector = "General"
-                            });
+                                Sector = "General",
+                                Proyeccion5Annos = PibProjectionService.ProyectarPibAjustado5Years(pib, tasa, TasaCrecimiento)
+                            };
+ 
+                            resultados.Add(resultado);
                         }
                         catch { }
                     }
                 }
             }
         }
-
+ 
         reloj.Stop();
-        MostrarEstadisticas(resultados, cantidadEsperada, reloj.ElapsedMilliseconds);
-        VisualizadorConsola.MostrarTablaResultados(resultados);
-        return reloj.ElapsedMilliseconds;
+        tiempoMs = reloj.ElapsedMilliseconds;
+        return resultados;
     }
-
-    static long DatosConParalellForeach(string ruta, int cantidadEsperada, int numHilos = -1)
+ 
+    public static List<ResultadoSimulacion> EjecutarParallel(string ruta, out long tiempoMs)
     {
         var resultados = new ConcurrentBag<ResultadoSimulacion>();
         var reloj = Stopwatch.StartNew();
-
+ 
+        List<string> lineas;
         using (var lector = new StreamReader(ruta))
         {
-            lector.ReadLine();
-            var lineas = new List<string>();
-
-            while (!lector.EndOfStream)
-            {
-                string linea = lector.ReadLine();
-                if (!string.IsNullOrWhiteSpace(linea))
-                    lineas.Add(linea);
-            }
-
-            var opciones = new ParallelOptions();
-            if (numHilos > 0) opciones.MaxDegreeOfParallelism = numHilos;
-
-            Parallel.ForEach(lineas, opciones, linea =>
-            {
-                var partes = linea.Split(',');
-                if (partes.Length == 3)
-                {
-                    try
-                    {
-                        string pais = partes[0];
-                        double pib = double.Parse(partes[1]);
-                        double tasa = double.Parse(partes[2]);
-
-                        double pibAjustado = pib * (1 - tasa);
-                        double cambioPib = (pibAjustado - pib) / pib * 100;
-
-                        resultados.Add(new ResultadoSimulacion
-                        {
-                            Pais = pais,
-                            PIBOriginal = pib,
-                            TasaArancel = tasa,
-                            PIBAjustado = pibAjustado,
-                            CambioPib = cambioPib,
-                            Sector = "General"
-                        });
-                    }
-                    catch { }
-                }
-            });
+            lector.ReadLine(); // encabezado
+            lineas = lector.ReadToEnd()
+                           .Split('\n')
+                           .Where(l => !string.IsNullOrWhiteSpace(l))
+                           .ToList();
         }
-
+ 
+        Parallel.ForEach(lineas, linea =>
+        {
+            var partes = linea.Split(',');
+            if (partes.Length == 3)
+            {
+                try
+                {
+                    string pais = partes[0];
+                    double pib = double.Parse(partes[1]);
+                    double tasa = double.Parse(partes[2]);
+ 
+                    double pibAjustado = TariffImpactCalculator.CalcularPibAjustado(pib, tasa);
+                    double cambioPib = (pibAjustado - pib) / pib * 100;
+ 
+                    var resultado = new ResultadoSimulacion
+                    {
+                        Pais = pais,
+                        PIBOriginal = pib,
+                        TasaArancel = tasa,
+                        PIBAjustado = pibAjustado,
+                        CambioPib = cambioPib,
+                        Sector = "General",
+                        Proyeccion5Annos = PibProjectionService.ProyectarPibAjustado5Years(pib, tasa, TasaCrecimiento)
+                    };
+ 
+                    resultados.Add(resultado);
+                }
+                catch { }
+            }
+        });
+ 
         reloj.Stop();
-        MostrarEstadisticas(resultados.ToList(), cantidadEsperada, reloj.ElapsedMilliseconds);
-        VisualizadorConsola.MostrarTablaResultados(resultados.ToList());
-        return reloj.ElapsedMilliseconds;
+        tiempoMs = reloj.ElapsedMilliseconds;
+        return resultados.ToList();
     }
-
-    static long DatosConWhenAll(string ruta, int cantidadEsperada)
+ 
+    public static List<ResultadoSimulacion> EjecutarWhenAll(string ruta, out long tiempoMs)
     {
         var resultados = new ConcurrentBag<ResultadoSimulacion>();
         var reloj = Stopwatch.StartNew();
-
+ 
         List<string> lineas;
         using (var lector = new StreamReader(ruta))
         {
             lector.ReadLine();
-            lineas = new List<string>();
-            while (!lector.EndOfStream)
-            {
-                string linea = lector.ReadLine();
-                if (!string.IsNullOrWhiteSpace(linea))
-                    lineas.Add(linea);
-            }
+            lineas = lector.ReadToEnd()
+                           .Split('\n')
+                           .Where(l => !string.IsNullOrWhiteSpace(l))
+                           .ToList();
         }
-
+ 
         var tareas = lineas.Select(linea => Task.Run(() =>
         {
             var partes = linea.Split(',');
@@ -169,58 +147,39 @@ class Program
                     string pais = partes[0];
                     double pib = double.Parse(partes[1]);
                     double tasa = double.Parse(partes[2]);
-
-                    double pibAjustado = pib * (1 - tasa);
+ 
+                    double pibAjustado = TariffImpactCalculator.CalcularPibAjustado(pib, tasa);
                     double cambioPib = (pibAjustado - pib) / pib * 100;
-
-                    resultados.Add(new ResultadoSimulacion
+ 
+                    var resultado = new ResultadoSimulacion
                     {
                         Pais = pais,
                         PIBOriginal = pib,
                         TasaArancel = tasa,
                         PIBAjustado = pibAjustado,
                         CambioPib = cambioPib,
-                        Sector = "General"
-                    });
+                        Sector = "General",
+                        Proyeccion5Annos = PibProjectionService.ProyectarPibAjustado5Years(pib, tasa, TasaCrecimiento)
+                    };
+ 
+                    resultados.Add(resultado);
                 }
                 catch { }
             }
         })).ToArray();
-
+ 
         Task.WaitAll(tareas);
-
+ 
         reloj.Stop();
-        MostrarEstadisticas(resultados.ToList(), cantidadEsperada, reloj.ElapsedMilliseconds);
-        VisualizadorConsola.MostrarTablaResultados(resultados.ToList());
-        return reloj.ElapsedMilliseconds;
+        tiempoMs = reloj.ElapsedMilliseconds;
+        return resultados.ToList();
     }
-
-    static int ContarLineasValidas(string ruta)
+ 
+    public static double CalcularPibMundialAjustado(List<ResultadoSimulacion> resultados)
     {
-        int contador = 0;
-        using (var lector = new StreamReader(ruta))
-        {
-            lector.ReadLine();
-            while (!lector.EndOfStream)
-            {
-                var linea = lector.ReadLine();
-                if (!string.IsNullOrWhiteSpace(linea))
-                    contador++;
-            }
-        }
-        return contador;
-    }
-
-    static void MostrarEstadisticas(List<ResultadoSimulacion> resultados, int esperados, long tiempo)
-    {
-        Console.WriteLine($" Tiempo de ejecución: {tiempo} ms");
-        Console.WriteLine($" Resultados obtenidos: {resultados.Count} / Esperados: {esperados}");
-
-        int errores = resultados.Count(r => r.Pais == null || r.PIBAjustado <= 0);
-        Console.WriteLine(errores == 0
-            ? "  Todos los resultados son válidos"
-            : $"   Resultados inválidos: {errores}");
-
-        Console.WriteLine();
+       
+        double pibMundialAjustado = resultados.Sum(r => r.PIBAjustado);
+       
+        return pibMundialAjustado;
     }
 }
